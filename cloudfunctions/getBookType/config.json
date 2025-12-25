@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "openapi": []
+  },
+  "triggers": [
+    {
+      "name": "getBookType",
+      "type": "http",
+      "config": {
+        "methods": ["GET", "POST"]
+      }
+    }
+  ]
+}

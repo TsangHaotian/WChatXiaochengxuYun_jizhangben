@@ -1,0 +1,305 @@
+/* 顶部统计卡片 - 科幻玻璃卡片 */
+.header_wrapper {
+  padding: 32rpx 30rpx 10rpx;
+}
+
+.header_top {
+  padding: 30rpx;
+  border-radius: 26rpx;
+  background: radial-gradient(circle at 0% 0%, #22d3ee 0, #4f46e5 40%, #020617 85%);
+  box-shadow: 0 26rpx 60rpx rgba(15, 23, 42, 0.9);
+  position: relative;
+  overflow: hidden;
+}
+
+.header_top::after {
+  content: '';
+  position: absolute;
+  right: -80rpx;
+  top: -80rpx;
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 50%;
+  background: radial-gradient(circle, #facc15 0, transparent 60%);
+  opacity: .25;
+}
+
+.header_date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.header_date_year {
+  font-size: 26rpx;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.header_date_display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header_date_month {
+  font-size: 30rpx;
+  color: #E5E7EB;
+}
+
+.header_date_tip {
+  margin-top: 4rpx;
+  font-size: 22rpx;
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.header_total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+
+.header_total_item {
+  width: 48%;
+}
+
+.header_total_item .label {
+  display: block;
+  font-size: 24rpx;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+.header_total_item .value {
+  display: block;
+  margin-top: 10rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+
+.header_total_item .value.income {
+  color: #4ADE80;
+}
+
+.header_total_item .value.pay {
+  color: #F97373;
+}
+
+.content_wrapper {
+  padding: 10rpx 30rpx 40rpx;
+}
+
+/* 月份选择器 */
+.month_selector {
+  margin-top: 12rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.month_selector_label {
+  font-size: 26rpx;
+  color: #9CA3AF;
+}
+
+.month_selector_actions {
+  display: flex;
+  align-items: center;
+}
+
+.month_selector_btn {
+  min-width: 220rpx;
+  padding: 10rpx 22rpx;
+  border-radius: 999rpx;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1rpx solid rgba(55, 65, 81, 0.9);
+  color: #E5E7EB;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.month_selector_all {
+  margin-left: 16rpx;
+  padding: 8rpx 20rpx;
+  border-radius: 999rpx;
+  border: 1rpx solid rgba(75, 85, 99, 0.9);
+  color: #E5E7EB;
+  font-size: 24rpx;
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.month_selector_icon {
+  margin-left: 10rpx;
+  font-size: 22rpx;
+  color: #9CA3AF;
+}
+
+/* 账单列表 */
+.book_list_wrapper {
+  width: 100%;
+  margin-top: 22rpx;
+  border-radius: 24rpx;
+  background: rgba(15, 23, 42, 0.92);
+  box-shadow: 0 18rpx 40rpx rgba(15, 23, 42, 0.85);
+  overflow: hidden;
+  border: 1rpx solid rgba(55, 65, 81, 0.8);
+}
+
+/* 每天的头部行 */
+.book_list_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18rpx 22rpx;
+  border-bottom: 1rpx solid rgba(31, 41, 55, 0.9);
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.9), rgba(30, 64, 175, 0.5));
+  font-size: 26rpx;
+  color: #9CA3AF;
+}
+
+.book_list_header text {
+  flex: 1;
+}
+
+.book_list_header .book_list_right {
+  text-align: right;
+  font-size: 24rpx;
+  color: #6EE7B7;
+}
+
+/* 单条账单行 */
+.book_list_item {
+  display: flex;
+  align-items: center;
+  padding: 18rpx 18rpx 18rpx 16rpx;
+  background: transparent;
+}
+
+.book_list_item .icon_wrapper {
+  padding: 12rpx;
+  box-sizing: border-box;
+  margin-right: 18rpx;
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 0%, #22d3ee 0, #1f2937 65%);
+  box-shadow: 0 0 18rpx rgba(56, 189, 248, 0.65);
+}
+
+.book_list_item .icon_wrapper image {
+  display: block;
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.book_list_item text {
+  font-size: 28rpx;
+  color: #E5E7EB;
+}
+
+.book_list_item_name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 16rpx;
+}
+
+.book_list_item .book_list_item_amt {
+  min-width: 160rpx;
+  text-align: right;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #F97373;
+}
+
+.book_list_item:last-child .book_list_item_amt,
+.book_list_item:last-child .book_list_item_name {
+  border-bottom: 0;
+}
+
+/* 空状态 */
+.empty_wrapper {
+  padding: 180rpx 40rpx 40rpx;
+  text-align: right;
+  color: #6B7280;
+}
+
+.empty_title {
+  display: block;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+
+.empty_sub {
+  display: block;
+  font-size: 26rpx;
+}
+
+/* 添加按钮 */
+.add_btn_wrapper {
+  position: fixed;
+  right: 40rpx;
+  bottom: 80rpx;
+  z-index: 100;
+}
+
+.add_btn {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: radial-gradient(circle, #22d3ee, #4f46e5);
+  box-shadow: 0 28rpx 55rpx rgba(56, 189, 248, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+
+.add_btn_icon {
+  font-size: 60rpx;
+  color: #fff;
+  line-height: 1;
+}
+
+/* 添加按钮容器 */
+.add-btn-container {
+  position: fixed;
+  bottom: 60rpx;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.add-btn {
+  width: 300rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #22d3ee, #4f46e5);
+  border-radius: 45rpx;
+  font-size: 32rpx;
+  box-shadow: 0 8rpx 24rpx rgba(56, 189, 248, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+
+.add-btn:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+.add-icon {
+  font-size: 36rpx;
+  margin-right: 10rpx;
+  font-weight: bold;
+}

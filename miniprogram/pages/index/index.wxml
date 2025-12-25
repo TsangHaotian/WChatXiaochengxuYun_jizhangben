@@ -1,0 +1,70 @@
+<!-- 顶部统计卡片 -->
+<view class="header_wrapper">
+  <view class="header_top">
+    <view class="header_date">
+      <text class="header_date_year">{{selectYear}}年</text>
+      <view class="header_date_display">
+        <text class="header_date_month">{{selectMonth}}月</text>
+        <text class="header_date_tip">当前月份概览</text>
+      </view>
+    </view>
+    <view class="header_total">
+      <view class="header_total_item">
+        <text class="label">本月收入</text>
+        <text class="value income">{{incomeAmt}}</text>
+      </view>
+      <view class="header_total_item">
+        <text class="label">本月支出</text>
+        <text class="value pay">{{payAmt}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="content_wrapper">
+  <!-- 下方独立的月份选择按钮 -->
+  <view class="month_selector">
+    <text class="month_selector_label">月份</text>
+    <view class="month_selector_actions">
+      <picker mode="date" fields="month" value="{{date}}" bindchange="selectDate">
+        <view class="month_selector_btn">
+          <text>{{selectYear}}年{{selectMonth}}月</text>
+          <text class="month_selector_icon">▼</text>
+        </view>
+      </picker>
+      
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view wx:if="{{bookList.length>0}}">
+    <view class="book_list_wrapper" wx:for="{{bookList}}" wx:for-index="idx" wx:key="idx">
+      <view class="book_list_header">
+        <text>{{item.year}}年{{item.month}}月</text>
+        <text class="book_list_right">
+          {{item.incomeAmt > 0 ? '收入：' + item.incomeAmt : ''}}
+          {{item.incomeAmt > 0 && item.payAmt > 0 ? ' | ' : ''}}
+          {{item.payAmt > 0 ? '支出：' + item.payAmt : ''}}
+        </text>
+      </view>
+      <view class="book_list_item" wx:for="{{item.list}}" wx:for-index="idy" wx:key="idy" wx:for-item="list"
+        bindlongpress="onLongPressBook" data-id="{{list.id}}">
+        <view class="icon_wrapper">
+          <image src="/utils/icons/{{list.bookTypeIcon || 'icon_01'}}.png" mode="aspectFit"></image>
+        </view>
+        <text class="book_list_item_name">{{list.remark?list.remark:list.bookTypeName}}</text>
+        <text class="book_list_item_amt">{{list.amtType==0?-list.bookAmt:list.bookAmt}}</text>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="empty_wrapper">
+    <text class="empty_title">本月还没有记账</text>
+    <text class="empty_sub">点击右下角按钮，开始第一笔记录吧</text>
+  </view>
+</view>
+
+<!-- 右下角添加按钮 -->
+<view class="add-btn-container">
+  <button class="add-btn" bindtap="goAddBook">
+    <text class="add-icon">+</text> 记一笔
+  </button>
+</view>

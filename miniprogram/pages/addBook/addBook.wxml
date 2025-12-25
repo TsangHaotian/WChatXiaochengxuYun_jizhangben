@@ -1,0 +1,63 @@
+<view class="tabs_wrapper">
+  <text class="{{activeTab==0?'active':''}}" catchtap="changeTab" data-type="0">支出</text>
+  <text class="{{activeTab==1?'active':''}}" catchtap="changeTab" data-type="1">收入</text>
+</view>
+<view class="padding_80"></view>
+<scroll-view class="booktype_wrapper clearfix {{activeType != -1?'padding':''}}" scroll-y="true">
+  <view class="booktype_item {{activeType==idx?'active':''}}" catchtap="selectBookType" data-idx="{{idx}}"
+    wx:for="{{bookTypeList}}" wx:for-index="idx" wx:key="idx">
+    <view class="booktype_image_wrapper">
+      <image src="{{'/utils/icons/'+item.icon+'.png'}}"></image>
+    </view>
+    <text>{{item.name}}</text>
+  </view>
+</scroll-view>
+<view hidden="{{activeType == -1}}" class="keyboard_wrapper">
+  <scroll-view hidden="{{selectTypeRemarks.length==0}}" class="remark_tips">
+    <text>推荐：</text>
+    <text class="remark_tip" catchtap="setRemarkByTip" data-remark="{{item}}"
+      wx:for="{{selectTypeRemarks}}" wx:for-index="idx" wx:key="idx">{{item}}</text>
+  </scroll-view>
+  <view class="keyboard_top">
+    <view class="keyboard_remark">
+      <image src="/utils/icons/icon_168.png"></image>
+      <input value="{{remark}}" placeholder="点击写备注..." bindinput="setRemark"></input>
+    </view>
+    <view class="keyboard_amt">{{amt}}</view>
+  </view>
+  <!-- 可滚动数字键盘区域，防止小屏幕下“完成”按钮被挡住 -->
+  <scroll-view class="keyboard_bottom clearfix" scroll-y="true">
+    <view catchtap="setAmt" data-val="7" class="keyboard_item">7</view>
+    <view catchtap="setAmt" data-val="8" class="keyboard_item">8</view>
+    <view catchtap="setAmt" data-val="9" class="keyboard_item">9</view>
+    
+    <view catchtap="setAmt" data-val="4" class="keyboard_item">4</view>
+    <view catchtap="setAmt" data-val="5" class="keyboard_item">5</view>
+    <view catchtap="setAmt" data-val="6" class="keyboard_item">6</view>
+   
+    <view catchtap="setAmt" data-val="1" class="keyboard_item">1</view>
+    <view catchtap="setAmt" data-val="2" class="keyboard_item">2</view>
+    <view catchtap="setAmt" data-val="3" class="keyboard_item">3</view>
+    
+    
+    <view catchtap="saveBook" class="keyboard_item btn">完成</view>
+    <view catchtap="setAmt" data-val="0" class="keyboard_item">0</view>
+
+    <view catchtap="setAmt" data-val="." class="keyboard_item">.</view>
+
+    <view catchtap="delAmt" class="keyboard_item del">
+      <image src="/utils/icons/icon_176.png"></image>
+    </view>
+    <view wx:if="{{today==selectDay}}" class="keyboard_item date">
+      <picker mode="date" value="{{date}}" end="{{today}}" bindchange="bindDateChange">
+        <image src="/utils/icons/icon_166.png"></image>今天
+      </picker>
+    </view>
+    <view wx:if="{{today==selectDay}}"></view>
+    <view wx:else class="keyboard_item date">
+      <picker mode="date" value="{{date}}" end="{{today}}" bindchange="bindDateChange">
+        {{selectDay}}
+      </picker>
+    </view>
+  </scroll-view>
+</view>

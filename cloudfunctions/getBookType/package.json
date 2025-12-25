@@ -1,0 +1,11 @@
+{
+  "name": "getbooktype",
+  "version": "1.0.0",
+  "description": "获取账单类型",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "latest"
+  },
+  "author": "",
+  "license": "ISC"
+}
