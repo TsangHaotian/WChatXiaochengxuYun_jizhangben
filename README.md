@@ -42,16 +42,22 @@
 
 ### 创建云环境
 <img width="1252" height="943" alt="0创建云环境" src="https://github.com/user-attachments/assets/55b99c28-c3db-4281-a816-2c475e949436" />
+
 ### 修改app.js中的云环境id
 <img width="986" height="564" alt="1修改appjd中的云环境id" src="https://github.com/user-attachments/assets/0d9951ad-9624-4b16-80d5-cc2046609956" />
+
 ### 选择云环境
 <img width="590" height="170" alt="2选择云环境" src="https://github.com/user-attachments/assets/90b8b3b7-c358-4d16-9dca-7e26a04ce5a3" />
+
 ### 五个云函数分别上传并部署
 <img width="477" height="220" alt="3四个函数分别上传并部署" src="https://github.com/user-attachments/assets/5516ab22-7d2f-4d46-a506-e746ba3aa27a" />
+
 ### 上传过程
 <img width="1229" height="906" alt="5创建数据库" src="https://github.com/user-attachments/assets/090c1c19-d014-4501-9c64-742918df1949" />
+
 ### 创建数据库（数据库名为books）
 <img width="1229" height="906" alt="5创建数据库" src="https://github.com/user-attachments/assets/24681ae4-4a87-48f0-b837-ec13586381bc" />
+
 ### 部署完毕即可正常使用
 
 
