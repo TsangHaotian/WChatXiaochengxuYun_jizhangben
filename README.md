@@ -34,6 +34,28 @@
 └── README.md           # 项目说明文档
 ```
 
+## 页面展示
+<img width="400" height="880" alt="正常使用1" src="https://github.com/user-attachments/assets/72cbbe4f-469a-450a-97e9-4dce149fe5ff" />
+<img width="400" height="880" alt="正常使用2" src="https://github.com/user-attachments/assets/c768479c-7172-44a0-9ba5-5beeae27b866" />
+
+## 部署详细教程
+
+### 创建云环境
+<img width="1252" height="943" alt="0创建云环境" src="https://github.com/user-attachments/assets/55b99c28-c3db-4281-a816-2c475e949436" />
+### 修改app.js中的云环境id
+<img width="986" height="564" alt="1修改appjd中的云环境id" src="https://github.com/user-attachments/assets/0d9951ad-9624-4b16-80d5-cc2046609956" />
+### 选择云环境
+<img width="590" height="170" alt="2选择云环境" src="https://github.com/user-attachments/assets/90b8b3b7-c358-4d16-9dca-7e26a04ce5a3" />
+### 五个云函数分别上传并部署
+<img width="477" height="220" alt="3四个函数分别上传并部署" src="https://github.com/user-attachments/assets/5516ab22-7d2f-4d46-a506-e746ba3aa27a" />
+### 上传过程
+<img width="1229" height="906" alt="5创建数据库" src="https://github.com/user-attachments/assets/090c1c19-d014-4501-9c64-742918df1949" />
+### 创建数据库（数据库名为books）
+<img width="1229" height="906" alt="5创建数据库" src="https://github.com/user-attachments/assets/24681ae4-4a87-48f0-b837-ec13586381bc" />
+### 部署完毕即可正常使用
+
+
+
 ## 云函数说明
 
 ### 1. addBook
@@ -144,13 +166,3 @@
    - 检查集合名称和字段名是否正确
    - 检查数据库权限设置
    - 确保查询条件正确
-
-## 参考文档
-
-- [微信小程序开发文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
-- [云开发数据库文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/database.html)
-
-## 许可证
-
-MIT License
